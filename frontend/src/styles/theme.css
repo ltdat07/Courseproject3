@@ -1,0 +1,219 @@
+body {
+  background:
+    radial-gradient(circle at 5% 8%, rgba(156, 79, 49, 0.3), transparent 25%),
+    radial-gradient(circle at 95% 92%, rgba(132, 76, 43, 0.28), transparent 28%),
+    linear-gradient(
+      90deg,
+      rgba(91, 49, 34, 0.38) 0%,
+      rgba(33, 26, 23, 0) 21%,
+      rgba(33, 26, 23, 0) 79%,
+      rgba(91, 49, 34, 0.38) 100%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(232, 207, 164, 0.018) 0,
+      rgba(232, 207, 164, 0.018) 1px,
+      transparent 1px,
+      transparent 86px
+    ),
+    #251b17;
+  background-attachment: fixed;
+  color: #352c25;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 1520px;
+  box-sizing: border-box;
+  padding-inline: clamp(24px, 4vw, 64px);
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+  border: 2px solid #8f3d32;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(180, 68, 50, 0.12), transparent 30%),
+    radial-gradient(circle at 92% 100%, rgba(182, 133, 55, 0.14), transparent 32%),
+    #efe3c8;
+  box-shadow:
+    0 0 0 6px rgba(239, 227, 200, 0.09),
+    0 26px 70px rgba(8, 5, 4, 0.5);
+}
+
+.hero::before {
+  background-image:
+    linear-gradient(rgba(111, 79, 52, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 79, 52, 0.045) 1px, transparent 1px);
+  mask-image: none;
+  opacity: 0.65;
+}
+
+.hero-kicker {
+  color: #943b31;
+}
+
+.hero-kicker-dot {
+  background: #b74838;
+  box-shadow: 0 0 0 5px rgba(183, 72, 56, 0.13);
+}
+
+.hero h1,
+.section-heading h2,
+.topic-card h3,
+.level-header h2,
+.theory-box h3,
+.task-box h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero h1 {
+  color: #30231c;
+  font-size: clamp(40px, 4.5vw, 58px);
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #a83c30, #d26945);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.narrator-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 680px;
+  margin-top: 20px;
+  padding: 15px 18px 16px 15px;
+  border: 1px solid #c8ad78;
+  border-left: 4px solid #b74838;
+  border-radius: 8px 16px 16px 8px;
+  background: rgba(255, 250, 236, 0.72);
+  box-shadow: 0 8px 20px rgba(86, 59, 34, 0.09);
+}
+
+.narrator-avatar {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #c8ad78;
+  border-radius: 50%;
+  background: #3b2d26;
+  font-size: 25px;
+  box-shadow: inset 0 0 0 3px #ead7af;
+}
+
+.narrator-name {
+  display: block;
+  margin-bottom: 4px;
+  color: #9b3d31;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #4c3a2c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.hero-stat {
+  border-color: #cbb991;
+  background: rgba(255, 250, 236, 0.72);
+  box-shadow: 0 5px 14px rgba(86, 59, 34, 0.07);
+}
+
+.hero-stat-label {
+  color: #806f5e;
+}
+
+.hero-stat strong {
+  color: #352a22;
+}
+
+.xp-icon {
+  background: #f2dca5;
+  color: #8b5b0e;
+}
+
+.achievement-icon {
+  background: #ead0c3;
+  color: #923c32;
+}
+
+.level-icon {
+  background: #cfe0bd;
+  color: #45682c;
+}
+
+.hero-progress-card {
+  border-color: #bda579;
+  background: rgba(255, 250, 236, 0.78);
+  box-shadow:
+    inset 0 0 0 3px rgba(151, 112, 63, 0.07),
+    0 12px 28px rgba(86, 59, 34, 0.12);
+}
+
+.hero-progress-caption,
+.hero-progress-meta,
+.hero-mission div > span,
+.hero-progress-note {
+  color: #806f5e;
+}
+
+.hero-progress-header h2,
+.hero-progress-meta strong,
+.hero-mission strong {
+  color: #382a21;
+}
+
+.hero-progress-percent {
+  color: #a83c30;
+}
+
+.hero-progress-track {
+  background: #d7c8aa;
+}
+
+.hero-progress-fill {
+  background: linear-gradient(90deg, #a83c30, #d57b42);
+  box-shadow: none;
+}
+
+.hero-mission {
+  border-color: #c7a65c;
+  background: rgba(225, 179, 75, 0.14);
+}
+
+.hero-mission-marker {
+  background: #a83c30;
+  color: #fff7e6;
+}
+
+.achievements-box,
+.analytics-box,
+.levels-section {
+  padding: 32px;
+  border: 2px solid #9d754d;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(180, 68, 50, 0.08), transparent 26%),
+    #efe3c8;
+  box-shadow:
+    0 0 0 5px rgba(239, 227, 200, 0.07),
+    0 20px 50px rgba(8, 5, 4, 0.34);
+}
+
+.levels-section {
+  margin-top: 42px;
+}

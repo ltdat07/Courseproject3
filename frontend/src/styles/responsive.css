@@ -1,0 +1,222 @@
+@media (min-width: 1380px) {
+  .topics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-progress-card {
+    max-width: 560px;
+  }
+
+  .ai-lab-intro {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .ai-lab-entry {
+    grid-column: 2;
+    width: min(100%, 320px);
+  }
+
+  .ai-lab-workspace,
+  .ai-feedback-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-mission-brief {
+    border-right: 0;
+    border-bottom: 1px solid #c5ad82;
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 24px 16px;
+  }
+
+  .hero {
+    gap: 28px;
+    margin-bottom: 36px;
+    padding: 28px 22px;
+    border-radius: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(26px, 8vw, 38px);
+  }
+
+  .hero-description {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .narrator-box {
+    gap: 11px;
+    padding: 13px;
+  }
+
+  .narrator-avatar {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+  }
+
+  .hero-stat {
+    padding: 12px 14px;
+  }
+
+  .hero-progress-card {
+    padding: 20px;
+  }
+
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+
+  .chapters-counter,
+  .achievement-counter,
+  .analytics-score {
+    display: flex;
+    align-items: baseline;
+    align-self: flex-start;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .chapters-counter span,
+  .achievement-counter span,
+  .analytics-score span {
+    margin: 0;
+  }
+
+  .achievements-box,
+  .analytics-box,
+  .levels-section {
+    padding: 22px;
+  }
+
+  .topics-grid,
+  .achievements-list,
+  .analytics-summary,
+  .analytics-columns,
+  .topic-analytics-list {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-score {
+    text-align: left;
+  }
+
+  .attempt-history-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .attempt-history-item time {
+    grid-column: 2;
+  }
+
+  .level-page {
+    padding: 22px;
+  }
+
+  .theory-box,
+  .task-box {
+    padding: 18px;
+  }
+
+  .theory-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .theory-heading b {
+    align-self: flex-start;
+    white-space: normal;
+  }
+
+  .theory-code-panel .code-block {
+    padding: 16px;
+  }
+
+  .theory-code-panel .code-block code {
+    font-size: 13px;
+  }
+
+  .ai-lab-intro {
+    grid-template-columns: 1fr;
+    padding: 24px 22px;
+  }
+
+  .ai-lab-emblem {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ai-lab-copy h2 {
+    font-size: 26px;
+  }
+
+  .ai-lab-entry {
+    grid-column: auto;
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .ai-lab-panel {
+    padding: 0 14px 18px;
+  }
+
+  .ai-practice-tabs {
+    grid-template-columns: 1fr;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+
+  .ai-mission-brief {
+    padding: 22px;
+  }
+
+  .ai-code-editor {
+    min-height: 310px;
+    padding: 18px;
+    font-size: 13px;
+  }
+
+  .ai-code-actions,
+  .ai-feedback-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ai-analyze-button {
+    width: 100%;
+  }
+
+  .ai-feedback-card {
+    padding: 18px;
+  }
+
+}

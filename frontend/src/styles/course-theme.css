@@ -1,0 +1,282 @@
+.section-heading h2,
+.achievements-box .section-heading h2 {
+  color: #382a21;
+}
+
+.section-heading p,
+.achievements-box .section-heading p {
+  color: #746353;
+}
+
+.section-kicker {
+  color: #a83c30;
+}
+
+.achievement-kicker {
+  color: #8b5b0e;
+}
+
+.chapters-counter,
+.achievement-counter {
+  border-color: #c4ae84;
+  background: rgba(255, 250, 236, 0.68);
+}
+
+.chapters-counter strong,
+.achievement-counter strong {
+  color: #943b31;
+}
+
+.chapters-counter span,
+.achievement-counter span {
+  color: #7d6c5a;
+}
+
+.topics-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.topic-card {
+  min-height: 225px;
+  border-color: #c9b58b;
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(255, 251, 239, 0.98), rgba(239, 226, 199, 0.98));
+  box-shadow: 0 10px 22px rgba(86, 59, 34, 0.12);
+}
+
+.topic-card::before {
+  background: radial-gradient(
+    circle at 10% 0%,
+    rgba(168, 60, 48, 0.12),
+    transparent 40%
+  );
+}
+
+.topic-card:hover,
+.topic-card:focus-visible {
+  border-color: #a83c30;
+  box-shadow: 0 16px 30px rgba(86, 36, 25, 0.2);
+}
+
+.topic-icon {
+  border-color: #cbb991;
+  background: #eadbc0;
+  color: #9a3c31;
+}
+
+.topic-status {
+  border-color: #c9b58b;
+  background: rgba(255, 250, 236, 0.78);
+  color: #876c4c;
+}
+
+.completed-status {
+  border-color: #9db07e;
+  background: #dfe8cf;
+  color: #49672f;
+}
+
+.level {
+  color: #a83c30;
+}
+
+.topic-card h3 {
+  color: #352920;
+}
+
+.topic-card p {
+  color: #665648;
+}
+
+.topic-reward span {
+  color: #8b7865;
+}
+
+.topic-reward strong {
+  color: #966113;
+}
+
+.topic-arrow {
+  border-color: #c7b58f;
+  background: #efe2c7;
+  color: #8b5b43;
+}
+
+.topic-card:hover .topic-arrow,
+.topic-card:focus-visible .topic-arrow {
+  border-color: #a83c30;
+  background: #a83c30;
+  color: #fff8e8;
+}
+
+.topic-card.completed {
+  border-color: #7f9b5d;
+  background: linear-gradient(145deg, #edf2df, #dfe8ca);
+}
+
+.topic-card.completed .topic-icon {
+  border-color: #9daf7f;
+  background: #d3dfbe;
+  color: #4c6e31;
+}
+
+.topic-card.locked {
+  cursor: not-allowed;
+  opacity: 0.62;
+  filter: saturate(0.55);
+}
+
+.topic-card.locked:hover,
+.topic-card.locked:focus-visible {
+  transform: none;
+  border-color: #c9b58b;
+  box-shadow: 0 10px 22px rgba(86, 59, 34, 0.12);
+}
+
+.topic-card.locked:hover::before,
+.topic-card.locked:focus-visible::before {
+  opacity: 0;
+}
+
+.locked-status {
+  border-color: #aaa092;
+  background: #ded8cd;
+  color: #71695f;
+}
+
+.topic-card.locked .topic-arrow,
+.topic-card.locked:hover .topic-arrow,
+.topic-card.locked:focus-visible .topic-arrow {
+  border-color: #bcb2a3;
+  background: #dcd5c9;
+  color: #665f56;
+}
+
+.achievement-counter {
+  border-color: #c4ae84;
+  background: rgba(255, 250, 236, 0.7);
+}
+
+.achievements-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.achievement {
+  border-color: #c7a65c;
+  background: rgba(255, 249, 228, 0.8);
+}
+
+.achievement-trophy {
+  background: #ead9a8;
+}
+
+.achievement div > span {
+  color: #9a3c31;
+}
+
+.achievement strong {
+  color: #5b3f21;
+}
+
+.level-page {
+  border: 2px solid #9d754d;
+  background: #efe3c8;
+  color: #3e3026;
+  box-shadow: 0 22px 55px rgba(8, 5, 4, 0.38);
+  text-align: left;
+}
+
+.back-button {
+  color: #9a3c31;
+  font-weight: 800;
+}
+
+.level-header h2 {
+  color: #352920;
+}
+
+.level-header p {
+  color: #756555;
+}
+
+.level-progress {
+  border-color: #a83c30;
+  background: #fff7e7;
+  color: #a83c30;
+}
+
+.theory-box,
+.task-box {
+  border-color: #c6b287;
+  background: rgba(255, 250, 236, 0.78);
+}
+
+.theory-box h3,
+.task-box h3 {
+  color: #382a21;
+}
+
+.theory-box p {
+  color: #655548;
+}
+
+.theory-heading {
+  border-bottom-color: #d7c7a3;
+}
+
+.theory-heading span {
+  color: #a83c30;
+}
+
+.theory-heading b {
+  border-color: #c9b991;
+  background: #f7ecd5;
+  color: #80694e;
+}
+
+.theory-copy h4 {
+  border-left-color: #bd7b24;
+  color: #382a21;
+}
+
+.task-type {
+  border-color: #a83c30;
+  background: #f0d8c8;
+  color: #8f352d;
+}
+
+.story {
+  padding: 12px 15px;
+  border-left: 3px solid #bd7b24;
+  border-radius: 0 10px 10px 0;
+  background: #f5e6be;
+  color: #704618;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+.option {
+  border-color: #c9b991;
+  background: #f9f0dc;
+  color: #3f3127;
+}
+
+.option:hover {
+  border-color: #a83c30;
+}
+
+.option.selected {
+  border-color: #a83c30;
+  background: #ecd5c4;
+}
+
+.check-button {
+  background: #a83c30;
+  color: #fff8e8;
+}
+
+.next-button {
+  background: #c38b2f;
+  color: #2e2117;
+}

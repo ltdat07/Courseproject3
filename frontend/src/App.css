@@ -1,0 +1,8 @@
+/* Адаптивные стили подключаются последними, чтобы переопределить основные. */
+@import "./styles/layout.css";
+@import "./styles/course.css";
+@import "./styles/theme.css";
+@import "./styles/analytics.css";
+@import "./styles/course-theme.css";
+@import "./styles/ai-mentor.css";
+@import "./styles/responsive.css";
