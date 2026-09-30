@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useLayoutEffect, useRef } from "react";
 import { apiFetch } from "./api";
 import type { CurrentUser } from "./types";
 import HeroSummary from "./components/HeroSummary";
@@ -83,6 +83,21 @@ function App({ user, onLogout, isLoggingOut }: Props) {
     aiFeedback,
   } = useAiMentor(request, user.id);
 
+  const catalogRef = useRef<HTMLElement>(null);
+  const returningToTopics = useRef(false);
+
+  const returnToTopics = () => {
+    returningToTopics.current = true;
+    goBackToTopics();
+  };
+
+  useLayoutEffect(() => {
+    if (!selectedTopic && returningToTopics.current) {
+      returningToTopics.current = false;
+      catalogRef.current?.scrollIntoView({ block: "start", behavior: "instant" });
+    }
+  }, [selectedTopic]);
+
   return (
     <main className="app">
       <header className="account-bar">
@@ -116,7 +131,7 @@ function App({ user, onLogout, isLoggingOut }: Props) {
 
           <TopicCatalog topics={topics} completedTopicIds={completedTopicIds}
             unlockedTopicIds={unlockedTopicIds} isLoadingTopics={isLoadingTopics}
-            loadingTopicId={loadingTopicId} openTopic={openTopic} />
+            loadingTopicId={loadingTopicId} openTopic={openTopic} catalogRef={catalogRef} />
 
           <AiMentor aiStatus={aiStatus} isCheckingAiStatus={isCheckingAiStatus}
             refreshAiConnection={refreshAiConnection} isAnalyzingSolution={isAnalyzingSolution}
@@ -132,7 +147,7 @@ function App({ user, onLogout, isLoggingOut }: Props) {
 
       {selectedTopic && (
         <LessonView selectedTopic={selectedTopic} currentTask={currentTask}
-          goBackToTopics={goBackToTopics} currentTaskIndex={currentTaskIndex} tasks={tasks}
+          goBackToTopics={returnToTopics} currentTaskIndex={currentTaskIndex} tasks={tasks}
           selectedOptionId={selectedOptionId} setSelectedOptionId={setSelectedOptionId}
           answerResult={answerResult} checkAnswer={checkAnswer} isCheckingAnswer={isCheckingAnswer}
           retryTask={retryTask} isLastTask={isLastTask} goToNextTask={goToNextTask} />

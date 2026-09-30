@@ -1,3 +1,7 @@
+.levels-section {
+  scroll-margin-top: 24px;
+}
+
 .topics-grid {
   display: grid;
   gap: 18px;

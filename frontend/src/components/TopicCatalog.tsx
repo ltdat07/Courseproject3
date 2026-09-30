@@ -1,3 +1,4 @@
+import type { Ref } from "react";
 import type { TopicSummary } from "../types";
 import PixelIcon, { type PixelIconName } from "./PixelIcon";
 
@@ -13,6 +14,7 @@ type Props = {
   isLoadingTopics: boolean;
   loadingTopicId: number | null;
   openTopic: (topicId: number) => void;
+  catalogRef?: Ref<HTMLElement>;
 };
 
 export default function TopicCatalog({
@@ -22,9 +24,10 @@ export default function TopicCatalog({
   isLoadingTopics,
   loadingTopicId,
   openTopic,
+  catalogRef,
 }: Props) {
   return (
-    <section className="levels-section">
+    <section className="levels-section" ref={catalogRef}>
       <div className="section-heading levels-heading">
         <div>
           <span className="section-kicker">Карта приключения</span>
