@@ -63,6 +63,7 @@ beforeEach(async () => {
   originalGlobals = Object.fromEntries(["window", "document", "IS_REACT_ACT_ENVIRONMENT"]
     .map((name) => [name, Object.getOwnPropertyDescriptor(globalThis, name)]));
   dom = new JSDOM("<!doctype html><div id='root'></div>", { url: "http://localhost" });
+  dom.window.HTMLElement.prototype.scrollIntoView = () => {};
   globalThis.window = dom.window;
   globalThis.document = dom.window.document;
   globalThis.IS_REACT_ACT_ENVIRONMENT = true;

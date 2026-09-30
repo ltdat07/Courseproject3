@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from "react";
 import type { AnswerResult, Task, TopicDetail } from "../types";
 import { getTaskTypeLabel } from "../labels";
 import TheoryContent from "./TheoryContent";
@@ -35,10 +36,21 @@ export default function LessonView({
   isLastTask,
   goToNextTask,
 }: Props) {
+  const lessonRef = useRef<HTMLElement>(null);
+  const taskRef = useRef<HTMLDivElement>(null);
+  const previousTopicId = useRef<number | null>(null);
+
+  useLayoutEffect(() => {
+    const isNewTopic = previousTopicId.current !== selectedTopic.id;
+    const target = isNewTopic || currentTaskIndex === 0 ? lessonRef.current : taskRef.current;
+    target?.scrollIntoView({ block: "start", behavior: "instant" });
+    previousTopicId.current = selectedTopic.id;
+  }, [selectedTopic.id, currentTaskIndex]);
+
   return (
     <>
     {selectedTopic && !currentTask && (
-      <section className="level-page">
+      <section className="level-page" ref={lessonRef}>
         <button className="back-button" onClick={goBackToTopics}>
           ← Назад к уровням
         </button>
@@ -52,7 +64,7 @@ export default function LessonView({
     )}
 
     {selectedTopic && currentTask && (
-      <section className="level-page">
+      <section className="level-page" ref={lessonRef}>
         <button className="back-button" onClick={goBackToTopics}>
           ← Назад к уровням
         </button>
@@ -86,7 +98,7 @@ export default function LessonView({
           <TheoryContent theory={selectedTopic.theory} />
         </div>
 
-        <div className="task-box">
+        <div className="task-box" ref={taskRef}>
           <span className="task-type">
             {getTaskTypeLabel(currentTask.type)}
           </span>

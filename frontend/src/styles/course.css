@@ -1,4 +1,6 @@
-.levels-section {
+.levels-section,
+.level-page,
+.task-box {
   scroll-margin-top: 24px;
 }
 
